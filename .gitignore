@@ -1,0 +1,13 @@
+# 공개 저장소에는 브리핑 화면(docs/)과 README만 올린다.
+# 데이터·빌드 스크립트·배경자료(예산 접속점 등 내부 자료)는 로컬에만 둔다.
+/*
+!/docs
+!/README.md
+!/.gitignore
+
+# 임시 산출물
+_*.png
+_*.pdf
+__pycache__/
+Thumbs.db
+desktop.ini
