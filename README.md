@@ -1,9 +1,9 @@
-# 이웃종교 브리핑 (interfaith-brief)
+# 이웃종교 브리핑 (religion-news)
 
 한국 이웃종교 — 개신교 · 천주교 · 불교 · 유교 · 민족종교 — 의 소식과 종교정책을
 **주 2회(화·금)** 모아 정리하는 브리핑입니다.
 
-**📰 브리핑 보기 → https://yongeun-dotcom.github.io/interfaith-brief/**
+**📰 브리핑 보기 → https://yongeun-dotcom.github.io/religion-news/**
 
 ## 구성
 
