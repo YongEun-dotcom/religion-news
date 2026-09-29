@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>이웃종교 브리핑 — 소개</title>
+</head>
+<body style="margin:0">
+<style>
+:root{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9ECF0; --tint:#FBFCFD;
+  --line:#D5DAE1; --line-soft:#E5E8ED;
+  --ink:#14161C; --ink-2:#454B59; --ink-3:#737A8A;
+  --accent:#33406B;
+  --t-won:#5A7049; --t-bud:#8A6B2E; --t-pro:#3F6B88; --t-cat:#68557F; --t-etc:#7E574C; --t-pol:#33406B;
+  --t-folk:#3E6B63;
+  --serif:"Nanum Myeongjo","AppleMyungjo","Batang","바탕",Georgia,serif;
+  --sans:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --ground:#111318; --surface:#191C22; --surface-2:#22262E; --tint:#1D2027;
+    --line:#2E333C; --line-soft:#252932;
+    --ink:#E8EAF0; --ink-2:#B0B6C3; --ink-3:#7C8393;
+    --accent:#A2B0E2;
+    --t-won:#9DB58A; --t-bud:#D0AC71; --t-pro:#87AECB; --t-cat:#AC97C9; --t-etc:#C29286; --t-pol:#A2B0E2;
+  --t-folk:#82B5AC;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#111318; --surface:#191C22; --surface-2:#22262E; --tint:#1D2027;
+  --line:#2E333C; --line-soft:#252932;
+  --ink:#E8EAF0; --ink-2:#B0B6C3; --ink-3:#7C8393;
+  --accent:#A2B0E2;
+  --t-won:#9DB58A; --t-bud:#D0AC71; --t-pro:#87AECB; --t-cat:#AC97C9; --t-etc:#C29286; --t-pol:#A2B0E2;
+  --t-folk:#82B5AC;
+}
+:root[data-theme="light"]{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9ECF0; --tint:#FBFCFD;
+  --line:#D5DAE1; --line-soft:#E5E8ED;
+  --ink:#14161C; --ink-2:#454B59; --ink-3:#737A8A;
+  --accent:#33406B;
+  --t-won:#5A7049; --t-bud:#8A6B2E; --t-pro:#3F6B88; --t-cat:#68557F; --t-etc:#7E574C; --t-pol:#33406B;
+  --t-folk:#3E6B63;
+}
+
+body{background:var(--ground);color:var(--ink);font-family:var(--sans);
+  font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;
+  /* 한글은 어절 단위로 끊는다 — 없으면 단어 중간에서 줄이 바뀐다 */
+  word-break:keep-all;overflow-wrap:break-word;}
+.wrap{max-width:1000px;margin:0 auto;padding:36px 22px 72px;display:flex;flex-direction:column;gap:30px;}
+a{color:inherit;}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px;}
+.tone-won{color:var(--t-won);} .tone-bud{color:var(--t-bud);} .tone-pro{color:var(--t-pro);}
+.tone-cat{color:var(--t-cat);} .tone-etc{color:var(--t-etc);} .tone-pol{color:var(--t-pol);}
+.tone-folk{color:var(--t-folk);}
+/* 종교 상징 — 획은 currentColor를 따라가므로 전통색·인쇄 흑백 모두에서 살아난다 */
+.sym{width:16px;height:16px;flex:none;display:inline-block;vertical-align:-2px;}
+.sym svg{width:100%;height:100%;display:block;}
+.sym svg *{vector-effect:non-scaling-stroke;}
+.card > header .sym{width:19px;height:19px;}
+.item .sym{width:14px;height:14px;margin-right:5px;vertical-align:-2px;}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin:-4px 0 12px;font-size:13.5px;color:var(--ink-3);}
+.legend span{display:inline-flex;align-items:center;gap:5px;}
+.legend .sym{width:14px;height:14px;}
+
+/* ── 제호 ─────────────────────────────── */
+.mast{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 20px;
+  padding-bottom:14px;border-bottom:2.5px solid var(--ink);}
+.mast .l{display:flex;flex-direction:column;gap:5px;}
+.eyebrow{font-size:12.5px;letter-spacing:.24em;color:var(--ink-3);font-weight:700;}
+.mast h1{font-family:var(--serif);font-size:clamp(28px,4.1vw,36px);line-height:1.15;
+  font-weight:400;letter-spacing:-.01em;margin:0;}
+.mast .r{display:flex;gap:18px;font-size:14px;color:var(--ink-3);
+  font-variant-numeric:tabular-nums;padding-bottom:4px;}
+.mast .r b{display:block;font-size:19px;color:var(--ink);font-weight:700;line-height:1.2;}
+
+/* ── 헤드라인 한 줄 ────────────────────── */
+.headline{font-family:var(--serif);font-size:clamp(21px,2.8vw,26px);line-height:1.48;
+  margin:0;text-wrap:pretty;letter-spacing:-.01em;}
+
+/* ── 상시 자료 바로가기 ────────────────── */
+.refbar{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:-8px 0 -4px;}
+.refbar .lb{font-size:12.5px;letter-spacing:.14em;color:var(--ink-3);font-weight:800;
+  margin-right:3px;}
+.refbar a{font-size:14.5px;font-weight:700;text-decoration:none;color:var(--ink-2);
+  background:var(--tint);border:1px solid var(--line);border-radius:4px;padding:5px 12px;
+  display:inline-flex;align-items:center;gap:6px;}
+.refbar a:hover{border-color:var(--accent);color:var(--accent);background:var(--surface);}
+.refbar a::after{content:"→";opacity:.5;font-weight:400;}
+
+/* ── 섹션 머리 ────────────────────────── */
+.hd{display:flex;align-items:baseline;gap:10px;margin:0 0 13px;
+  padding-bottom:7px;border-bottom:1.5px solid var(--ink);}
+.hd h2{font-size:15px;letter-spacing:.14em;font-weight:800;margin:0;}
+.hd .sub{font-size:13.5px;color:var(--ink-3);margin-left:auto;font-variant-numeric:tabular-nums;}
+
+/* ── 핵심 N ───────────────────────────── */
+ol.top{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;}
+ol.top > li{display:grid;grid-template-columns:30px 1fr;gap:14px;
+  padding:15px 0;border-top:1px solid var(--line-soft);}
+ol.top > li:first-child{border-top:none;padding-top:2px;}
+.tno{font-family:var(--serif);font-size:24px;line-height:1.05;color:var(--ink-3);
+  font-variant-numeric:tabular-nums;text-align:right;}
+.thl{font-size:19px;font-weight:700;line-height:1.42;letter-spacing:-.01em;text-wrap:pretty;}
+.tag{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.08em;
+  padding:2px 7px;border-radius:3px;border:1.5px solid currentColor;margin-right:8px;vertical-align:3px;}
+.twhy{font-size:16px;color:var(--ink-2);line-height:1.62;margin-top:6px;text-wrap:pretty;}
+.twhy b{color:var(--ink);font-weight:700;letter-spacing:.02em;margin-right:6px;}
+
+/* ── 정세 비교 매트릭스 ────────────────── */
+.mtx{display:flex;flex-direction:column;}
+.mtx-head,.mtx-row{display:grid;grid-template-columns:96px repeat(3,1fr);gap:20px;}
+.mtx-head{padding-bottom:8px;border-bottom:1px solid var(--line);}
+.mtx-head span{font-size:13px;letter-spacing:.1em;color:var(--ink-3);font-weight:800;}
+.mtx-row{padding:15px 0;border-top:1px solid var(--line-soft);align-items:start;}
+.mtx-row:first-of-type{border-top:none;}
+.who{display:flex;align-items:center;gap:7px;font-size:16.5px;font-weight:800;line-height:1.35;}
+.cell{font-size:15.2px;line-height:1.6;color:var(--ink-2);text-wrap:pretty;}
+.cell::before{content:attr(data-l);display:none;font-size:12.5px;letter-spacing:.1em;
+  color:var(--ink-3);font-weight:800;margin-bottom:3px;}
+
+/* ── 주제 온도 ────────────────────────── */
+ul.heat{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px;}
+ul.heat li{display:grid;grid-template-columns:13px 1fr auto auto;gap:14px;align-items:center;
+  padding:7px 0;border-top:1px solid var(--line-soft);}
+ul.heat li:first-child{border-top:none;}
+.tname{font-size:15.2px;font-weight:600;line-height:1.4;}
+.dots{display:flex;gap:4px;align-items:center;}
+.dots i{width:8px;height:8px;border-radius:50%;border:1.5px solid currentColor;opacity:.35;}
+.dots i.on{background:currentColor;opacity:1;}
+.hn{font-size:13.5px;color:var(--ink-3);text-align:right;width:54px;
+  font-variant-numeric:tabular-nums;}
+.hn.cold{opacity:.55;}
+
+/* ── 항목 목록 (날짜 레일) ─────────────── */
+ul.items{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;}
+.item{display:grid;grid-template-columns:52px 1fr;gap:13px;
+  padding:11px 0;border-top:1px solid var(--line-soft);}
+.item:first-child{border-top:none;padding-top:0;}
+.item .d{font-size:13.5px;color:var(--ink-3);font-variant-numeric:tabular-nums;
+  padding-top:2px;line-height:1.45;}
+.item .t{font-size:16.4px;font-weight:700;line-height:1.46;text-wrap:pretty;letter-spacing:-.005em;}
+.item .t a{text-decoration:none;border-bottom:1px solid var(--line);}
+.item .t a:hover{border-bottom-color:currentColor;}
+.item .n{font-size:15.2px;color:var(--ink-2);line-height:1.58;margin-top:3px;text-wrap:pretty;}
+.item .m{font-size:13px;color:var(--ink-3);margin-top:4px;}
+.flag{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.06em;
+  padding:1px 6px;border-radius:3px;border:1px solid currentColor;vertical-align:2px;margin-right:7px;}
+.empty{font-size:15px;color:var(--ink-3);padding:4px 0 10px;}
+
+/* ── 종단 카드 ────────────────────────── */
+.grid{display:flex;flex-direction:column;gap:14px;}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:16px 18px 14px;}
+.card > header{display:flex;align-items:center;gap:8px;margin-bottom:11px;
+  padding-bottom:8px;border-bottom:1.5px solid currentColor;}
+.card h3{font-size:17px;font-weight:800;margin:0;color:var(--ink);letter-spacing:-.01em;}
+.count{margin-left:auto;font-size:13px;color:var(--ink-3);font-variant-numeric:tabular-nums;}
+
+/* ── 판(slab) / 일정 ──────────────────── */
+.slab{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:18px 20px;}
+.watch{list-style:none;margin:0;padding:0;}
+.watch li{display:grid;grid-template-columns:78px 1fr;gap:14px;align-items:baseline;
+  padding:10px 0;border-top:1px solid var(--line-soft);}
+.watch li:first-child{border-top:none;padding-top:0;}
+.watch .when{font-family:var(--serif);font-size:16.5px;color:var(--accent);
+  font-variant-numeric:tabular-nums;}
+.watch .what{font-size:16px;font-weight:700;}
+.watch .why{font-size:15px;color:var(--ink-2);margin-top:2px;line-height:1.57;}
+
+/* ── 소스 ─────────────────────────────── */
+.src{display:flex;flex-wrap:wrap;gap:5px 6px;}
+.src a,.src span{font-size:13.5px;padding:4px 9px;border-radius:3px;text-decoration:none;
+  border:1px solid var(--line);background:var(--tint);color:var(--ink-2);}
+.src a:hover{border-color:var(--accent);color:var(--accent);}
+.src span.down{color:var(--ink-3);text-decoration:line-through;}
+.foot{font-size:13.5px;color:var(--ink-3);line-height:1.67;margin-top:9px;}
+
+@media (max-width:720px){
+  .wrap{padding:26px 15px 52px;gap:24px;}
+  .mtx-head{display:none;}
+  .mtx-row{grid-template-columns:1fr;gap:9px;padding:14px 0;}
+  .cell::before{display:block;}
+  ul.heat li{grid-template-columns:13px 1fr 60px 40px;gap:8px;}
+  .watch li{grid-template-columns:1fr;gap:2px;}
+  .item{grid-template-columns:44px 1fr;gap:10px;}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
+
+/* ── A4 인쇄 ───────────────────────────── */
+@page{size:A4 portrait;margin:14mm 13mm 15mm;}
+@media print{
+  :root,:root[data-theme="dark"],:root[data-theme="light"]{
+    --ground:#FFFFFF; --surface:#FFFFFF; --surface-2:#E4E7EC; --tint:#FFFFFF;
+    --line:#A9B0BB; --line-soft:#D8DCE3;
+    --ink:#000000; --ink-2:#282C34; --ink-3:#585F6D;
+    --accent:#242E4E;
+    --t-won:#44553A; --t-bud:#6E5427; --t-pro:#355166; --t-cat:#4F4066; --t-etc:#63443B; --t-pol:#242E4E;
+    --t-folk:#31564F;
+  }
+  html,body{background:#fff;}
+  body{font-size:9.3pt;line-height:1.46;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .wrap{max-width:none;margin:0;padding:0;gap:6mm;}
+
+  .hd{break-after:avoid;page-break-after:avoid;margin-bottom:2.4mm;padding-bottom:1.4mm;}
+  .hd h2{font-size:9.2pt;}
+  .hd .sub{font-size:8.3pt;}
+  .card > header,.mtx-head{break-after:avoid;page-break-after:avoid;}
+  .item,ol.top > li,.mtx-row,.watch li,ul.heat li{break-inside:avoid;page-break-inside:avoid;}
+
+  .card,.slab{border:none;border-top:1px solid var(--line);border-radius:0;padding:2.6mm 0 0;background:none;}
+  .grid{gap:3.5mm;}
+  .src a,.src span{border:none;background:none;padding:0 7px 0 0;}
+  .item .t a{border:none;}
+  a{text-decoration:none;color:inherit;}
+
+  .mast{padding-bottom:2.6mm;border-bottom-width:1.6pt;}
+  .mast h1{font-size:19.5pt;}
+  .mast .r b{font-size:11.4pt;}
+  .mast .r{font-size:8.1pt;gap:9mm;}
+  .eyebrow{font-size:7.7pt;}
+  .headline{font-size:13.8pt;line-height:1.4;max-width:none;}
+
+  .tno{font-size:14.4pt;}
+  .thl{font-size:11.6pt;}
+  .twhy{font-size:9.2pt;margin-top:1mm;max-width:none;}
+  ol.top > li{padding:2.4mm 0;grid-template-columns:7mm 1fr;gap:3mm;}
+
+  .mtx-head,.mtx-row{grid-template-columns:20mm repeat(3,1fr);gap:5mm;}
+  .mtx-row{padding:2.4mm 0;}
+  .who{font-size:9.7pt;}
+  .cell{font-size:8.3pt;line-height:1.44;}
+
+  ul.heat li{grid-template-columns:3mm 1fr auto auto;gap:3mm;padding:1mm 0;}
+  .tname{font-size:8.9pt;}
+  .dots i{width:1.9mm;height:1.9mm;}
+  .hn{font-size:8.3pt;width:13mm;}
+
+  /* 이웃종교 소식은 2단으로 흘려 지면을 아낀다 */
+  .grid ul.items{display:block;column-count:2;column-gap:7mm;}
+  .grid .item{display:grid;grid-template-columns:10mm 1fr;gap:2.5mm;padding:1.8mm 0;}
+  .grid .item:first-child{padding-top:0;}
+  .item .d{font-size:8.1pt;}
+  .item .t{font-size:9.2pt;}
+  .item .n{font-size:8.5pt;line-height:1.42;}
+  .item .m{font-size:7.7pt;margin-top:0.6mm;}
+  .card h3{font-size:10.4pt;}
+
+  .refbar{gap:2mm;margin:0;font-size:8.3pt;}
+  .refbar a{border:none;background:none;padding:0;font-size:8.3pt;color:var(--ink-2);}
+  .refbar a::after{content:" ·";opacity:1;}
+  .refbar a:last-of-type::after{content:"";}
+
+  .watch li{padding:1.6mm 0;grid-template-columns:17mm 1fr;}
+  .watch .when{font-size:9.3pt;} .watch .what{font-size:9.2pt;} .watch .why{font-size:8.5pt;}
+  .src a,.src span,.foot{font-size:8.3pt;}
+  .flag,.tag{font-size:7.7pt;padding:0 4px;}
+}
+</style>
+<div class="wrap">
+<header class="mast"><div class="l"><div class="eyebrow">이웃종교 브리핑</div><h1>소개</h1></div><div class="r"><span><b>주 2회</b>화·금 아침</span><span><b>제22호</b>2026년 7월 시작</span><span><b>32곳</b>읽는 소스</span></div></header>
+<p class="headline">한국의 이웃종교가 지금 무엇을 하고 있는지, 주 2회 한 장으로 읽습니다.</p>
+<style>
+.issuenav{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:-8px 0 -4px;}
+.issuenav .lb{font-size:12.5px;letter-spacing:.14em;font-weight:800;margin-right:3px;
+  color:var(--ink-3,#737A8A);}
+.issuenav a,.issuenav .cur{font-size:14.5px;font-weight:700;text-decoration:none;
+  border:1px solid var(--line,#D5DAE1);border-radius:4px;padding:5px 11px;
+  display:inline-flex;align-items:center;line-height:1.2;
+  font-variant-numeric:tabular-nums;}
+.issuenav a{color:var(--ink-2,#454B59);background:var(--tint,#FBFCFD);}
+.issuenav a:hover{border-color:var(--accent,#33406B);color:var(--accent,#33406B);
+  background:var(--surface,#FFFFFF);}
+.issuenav .cur{color:var(--accent,#33406B);border-color:var(--accent,#33406B);
+  background:var(--surface,#FFFFFF);box-shadow:inset 0 0 0 1px var(--accent,#33406B);}
+.issuenav .ab{margin-left:4px;color:var(--accent,#33406B);}
+@media print{.issuenav{display:none;}}
+
+/* ★소급 보정 — 정본은 template.html 의 같은 규칙이다(2026-09-29).
+   머리 수치 줄이 휴대폰 폭에서 안 접혀 쪽 전체가 가로로 넘치던 것을 고쳤는데,
+   archive/ 에 이미 굳은 지난 호는 그때의 CSS 를 품고 있어 고쳐지지 않는다.
+   그래서 공개본을 만들 때 여기서 한 번 더 덮는다. 새 호는 template.html 것이 먼저 먹고
+   이 줄은 같은 값이라 아무 일도 하지 않는다. ⛔값을 바꿀 거면 두 곳을 같이 고친다. */
+@media (max-width:720px){.mast .r{flex-wrap:wrap;gap:10px 16px;}}
+</style>
+<nav class="issuenav"><span class="lb">회차</span><a href="index.html">제22호 9.29</a><a href="2026-09-25.html">제21호 9.25</a><a href="2026-09-22.html">제20호 9.22</a><a href="2026-09-18.html">제19호 9.18</a><a href="2026-09-15.html">제18호 9.15</a><a href="2026-09-11.html">제17호 9.11</a><span class="cur">소개</span></nav>
+<style>
+.about p{margin:0 0 11px;line-height:1.72;font-size:15.5px;color:var(--ink-2,#454B59);}
+.about p:last-child{margin-bottom:0;}
+.about ul{margin:0;padding-left:0;list-style:none;}
+.about ul li{line-height:1.66;font-size:15.5px;color:var(--ink-2,#454B59);
+  padding:7px 0 7px 15px;border-top:1px solid var(--line-soft,#E5E8ED);position:relative;}
+.about ul li:first-child{border-top:0;padding-top:0;}
+.about ul li::before{content:"";position:absolute;left:2px;top:1.05em;
+  width:4px;height:4px;border-radius:50%;background:var(--ink-3,#737A8A);}
+.about ul li:first-child::before{top:.55em;}
+.about b{color:var(--ink,#14161C);}
+.about .k{display:inline-block;min-width:5.2em;margin-right:10px;font-weight:800;
+  color:var(--ink,#14161C);}
+</style>
+<div><div class="hd"><h2>무엇인가</h2><span class="sub">한 장</span></div><div class="slab about"><p>개신교 · 천주교 · 불교 · 유교 · 민족종교의 소식과 종교정책을 <b>화요일과 금요일 아침</b>에 모아 한 장으로 정리합니다. A4 한 장 인쇄에 맞춰져 있어, 브라우저 인쇄로 그대로 출력됩니다.</p><p>종단 안의 사람이 <b>바깥에서 무슨 일이 벌어지고 있는지</b> 알아야 할 때 읽도록 만들었습니다. 그래서 기사 요약에 그치지 않고, 각 항목에 「왜 중요한가」를 한 줄씩 붙입니다.</p></div></div>
+<div><div class="hd"><h2>한 장이 어떻게 짜여 있나</h2><span class="sub">여섯 층</span></div><div class="slab about"><ul><li><span class="k">핵심</span>이번 회차에서 놓치면 안 되는 다섯 건. 각각 「왜 중요한가」가 따라붙습니다.</li><li><span class="k">정세 비교</span>전통을 행, 「지금 힘 쏟는 곳 / 쟁점 / 다음에 올 것」을 열에 놓아 세로로 견줍니다.</li><li><span class="k">주제 온도</span>같은 주제가 몇 회차째 이어지는지 누적해 보여 줍니다. 한 번 뜬 일과 계속 가는 일을 가릅니다.</li><li><span class="k">종교정책</span>여러 전통에 걸리는 사안 — 세제 · 국가유산 · 사회 쟁점.</li><li><span class="k">예고</span>정부 보도자료 · 국회 의안 · 공모 공고처럼 <b>공개돼 있으나 아직 기사가 되지 않은</b> 자료.</li><li><span class="k">전통별</span>각 전통의 그 주 소식.</li></ul></div></div>
+<div><div class="hd"><h2>어떻게 만드나</h2><span class="sub">32곳</span></div><div class="slab about"><p>각 교단이 스스로 내는 <b>기관지</b>와 <b>정부 공개 자료</b>를 회차마다 훑습니다. 기관지는 그 종단의 일을 당사자 쪽에서 볼 수 있는 곳이라 일반 매체보다 먼저 봅니다.</p><p>정부 쪽은 보도자료 · 의안정보 · 공모 공고를 함께 봅니다. 기사가 되기 전에 이미 공개돼 있는 것들이라, 「예고」 칸이 여기서 나옵니다.</p><p>수집은 자동이고 <b>고르고 쓰는 것은 사람</b>입니다. 소스가 막히면 그 사실을 화면 머리에 「소스 정상 N곳」으로 적어 둡니다.</p></div></div>
+<div><div class="hd"><h2>원칙</h2><span class="sub">다섯</span></div><div class="slab about"><ul><li><b>모든 전통을 균등하게.</b> 항목 수 · 서술 분량 · 형식을 종교와 무관하게 같게 적용합니다. 배열 순서는 고정값이며 중요도 순위가 아닙니다.</li><li><b>갈등 사안은 입장이 다른 매체를 둘 이상 읽습니다.</b> 매체가 사건 당사자인 경우 그 사실을 해설에 밝힙니다.</li><li><b>날짜와 사실을 지어내지 않습니다.</b> 확인되지 않으면 비우고, 소식이 없으면 없다고 적습니다.</li><li><b>특정 종교를 평가하거나 비판하는 논조를 쓰지 않습니다.</b></li><li><b>요약은 사실 전달 범위로만.</b> 원문은 링크로 안내합니다.</li></ul></div></div>
+<div><div class="hd"><h2>회차</h2><span class="sub">최근 6호</span></div><ol class="top"><li><div class="tno">22</div><div><div class="thl"><a href="index.html">제22호 · 9월 29일</a></div><div class="twhy">AI 앞에서 교황은 「삶의 의미」를, 성균관은 「인간의 존엄」을 말했고, 조계종은 2기 임기를 열며 서울시와 문화유산 협의체를 추진한다.</div></div></li><li><div class="tno">21</div><div><div class="thl"><a href="2026-09-25.html">제21호 · 9월 25일</a></div><div class="twhy">추석 연휴 창에 감리교는 연회 감독 12명을 모두 가렸고, 조계종은 참사 유가족을 주빈으로 한 취임법회를 예고했으며, 해외선교 증여세엔 새 해석이 나왔다.</div></div></li><li><div class="tno">20</div><div><div class="thl"><a href="2026-09-22.html">제20호 · 9월 22일</a></div><div class="twhy">정부의 낙태약 도입에 종단 기관지 사설과 논평이 잇따랐고, 불교계는 남산 곤돌라 백지화를 요구했으며, 장로교는 교세 감소폭이 다시 커진 숫자를 받아 들었다.</div></div></li><li><div class="tno">19</div><div><div class="thl"><a href="2026-09-18.html">제19호 · 9월 18일</a></div><div class="twhy">정부가 임신중지 약물 도입을 공식화하자 주교회의와 한교총이 나란히 우려를 냈고, 장로교 총회 주간은 교권 안건 부결로 닫혔다.</div></div></li><li><div class="tno">18</div><div><div class="thl"><a href="2026-09-15.html">제18호 · 9월 15일</a></div><div class="twhy">2027년 우리고장 국가유산 활용사업이 379건에서 244건으로 줄고 트랙은 다섯 그대로다 — 장로교 총회가 열리고, 주교회의는 호르무즈 파병에 공식 반대했다.</div></div></li><li><div class="tno">17</div><div><div class="thl"><a href="2026-09-11.html">제17호 · 9월 11일</a></div><div class="twhy">한교총이 해외선교비 과세 시행령의 2년 유예를 공식 요구했고, 국가유산청은 체류형 신규 사업 둘을 지자체 공모로 연다 — 장로교 총회 주간이 다음 주 시작된다.</div></div></li></ol></div>
+<div class="foot">자동 수집·정리 과정에서 오류가 있을 수 있습니다. 잘못된 내용을 발견하시면 알려주세요.</div>
+</div>
+</body>
+</html>
