@@ -179,6 +179,9 @@ ul.items{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;}
 
 @media (max-width:720px){
   .wrap{padding:26px 15px 52px;gap:24px;}
+  /* 머리의 수치 줄(제N호·건수·소스·주기)은 넷이라 휴대폰 폭에서 안 접히면
+     쪽 전체가 가로로 넘쳐 본문 오른쪽이 잘린다(2026-09-29 실측 390px). */
+  .mast .r{flex-wrap:wrap;gap:10px 16px;}
   .mtx-head{display:none;}
   .mtx-row{grid-template-columns:1fr;gap:9px;padding:14px 0;}
   .cell::before{display:block;}
@@ -259,7 +262,7 @@ ul.items{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;}
 }
 </style>
 <div class="wrap">
-<header class="mast"><div class="l"><div class="eyebrow">이웃종교 브리핑</div><h1>소개</h1></div><div class="r"><span><b>주 2회</b>화·금 아침</span><span><b>제22호</b>2026년 7월 시작</span><span><b>32곳</b>읽는 소스</span></div></header>
+<header class="mast"><div class="l"><div class="eyebrow">이웃종교 브리핑</div><h1>소개</h1></div><div class="r"><span><b>주 2회</b>화·금 아침</span><span><b>제23호</b>2026년 7월 시작</span><span><b>31곳</b>읽는 소스</span></div></header>
 <p class="headline">한국의 이웃종교가 지금 무엇을 하고 있는지, 주 2회 한 장으로 읽습니다.</p>
 <style>
 .issuenav{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:-8px 0 -4px;}
@@ -284,7 +287,7 @@ ul.items{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;}
    이 줄은 같은 값이라 아무 일도 하지 않는다. ⛔값을 바꿀 거면 두 곳을 같이 고친다. */
 @media (max-width:720px){.mast .r{flex-wrap:wrap;gap:10px 16px;}}
 </style>
-<nav class="issuenav"><span class="lb">회차</span><a href="index.html">제22호 9.29</a><a href="2026-09-25.html">제21호 9.25</a><a href="2026-09-22.html">제20호 9.22</a><a href="2026-09-18.html">제19호 9.18</a><a href="2026-09-15.html">제18호 9.15</a><a href="2026-09-11.html">제17호 9.11</a><span class="cur">소개</span></nav>
+<nav class="issuenav"><span class="lb">회차</span><a href="index.html">제23호 10.2</a><a href="2026-09-29.html">제22호 9.29</a><a href="2026-09-25.html">제21호 9.25</a><a href="2026-09-22.html">제20호 9.22</a><a href="2026-09-18.html">제19호 9.18</a><a href="2026-09-15.html">제18호 9.15</a><span class="cur">소개</span></nav>
 <style>
 .about p{margin:0 0 11px;line-height:1.72;font-size:15.5px;color:var(--ink-2,#454B59);}
 .about p:last-child{margin-bottom:0;}
@@ -301,9 +304,9 @@ ul.items{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;}
 </style>
 <div><div class="hd"><h2>무엇인가</h2><span class="sub">한 장</span></div><div class="slab about"><p>개신교 · 천주교 · 불교 · 유교 · 민족종교의 소식과 종교정책을 <b>화요일과 금요일 아침</b>에 모아 한 장으로 정리합니다. A4 한 장 인쇄에 맞춰져 있어, 브라우저 인쇄로 그대로 출력됩니다.</p><p>종단 안의 사람이 <b>바깥에서 무슨 일이 벌어지고 있는지</b> 알아야 할 때 읽도록 만들었습니다. 그래서 기사 요약에 그치지 않고, 각 항목에 「왜 중요한가」를 한 줄씩 붙입니다.</p></div></div>
 <div><div class="hd"><h2>한 장이 어떻게 짜여 있나</h2><span class="sub">여섯 층</span></div><div class="slab about"><ul><li><span class="k">핵심</span>이번 회차에서 놓치면 안 되는 다섯 건. 각각 「왜 중요한가」가 따라붙습니다.</li><li><span class="k">정세 비교</span>전통을 행, 「지금 힘 쏟는 곳 / 쟁점 / 다음에 올 것」을 열에 놓아 세로로 견줍니다.</li><li><span class="k">주제 온도</span>같은 주제가 몇 회차째 이어지는지 누적해 보여 줍니다. 한 번 뜬 일과 계속 가는 일을 가릅니다.</li><li><span class="k">종교정책</span>여러 전통에 걸리는 사안 — 세제 · 국가유산 · 사회 쟁점.</li><li><span class="k">예고</span>정부 보도자료 · 국회 의안 · 공모 공고처럼 <b>공개돼 있으나 아직 기사가 되지 않은</b> 자료.</li><li><span class="k">전통별</span>각 전통의 그 주 소식.</li></ul></div></div>
-<div><div class="hd"><h2>어떻게 만드나</h2><span class="sub">32곳</span></div><div class="slab about"><p>각 교단이 스스로 내는 <b>기관지</b>와 <b>정부 공개 자료</b>를 회차마다 훑습니다. 기관지는 그 종단의 일을 당사자 쪽에서 볼 수 있는 곳이라 일반 매체보다 먼저 봅니다.</p><p>정부 쪽은 보도자료 · 의안정보 · 공모 공고를 함께 봅니다. 기사가 되기 전에 이미 공개돼 있는 것들이라, 「예고」 칸이 여기서 나옵니다.</p><p>수집은 자동이고 <b>고르고 쓰는 것은 사람</b>입니다. 소스가 막히면 그 사실을 화면 머리에 「소스 정상 N곳」으로 적어 둡니다.</p></div></div>
+<div><div class="hd"><h2>어떻게 만드나</h2><span class="sub">31곳</span></div><div class="slab about"><p>각 교단이 스스로 내는 <b>기관지</b>와 <b>정부 공개 자료</b>를 회차마다 훑습니다. 기관지는 그 종단의 일을 당사자 쪽에서 볼 수 있는 곳이라 일반 매체보다 먼저 봅니다.</p><p>정부 쪽은 보도자료 · 의안정보 · 공모 공고를 함께 봅니다. 기사가 되기 전에 이미 공개돼 있는 것들이라, 「예고」 칸이 여기서 나옵니다.</p><p>수집은 자동이고 <b>고르고 쓰는 것은 사람</b>입니다. 소스가 막히면 그 사실을 화면 머리에 「소스 정상 N곳」으로 적어 둡니다.</p></div></div>
 <div><div class="hd"><h2>원칙</h2><span class="sub">다섯</span></div><div class="slab about"><ul><li><b>모든 전통을 균등하게.</b> 항목 수 · 서술 분량 · 형식을 종교와 무관하게 같게 적용합니다. 배열 순서는 고정값이며 중요도 순위가 아닙니다.</li><li><b>갈등 사안은 입장이 다른 매체를 둘 이상 읽습니다.</b> 매체가 사건 당사자인 경우 그 사실을 해설에 밝힙니다.</li><li><b>날짜와 사실을 지어내지 않습니다.</b> 확인되지 않으면 비우고, 소식이 없으면 없다고 적습니다.</li><li><b>특정 종교를 평가하거나 비판하는 논조를 쓰지 않습니다.</b></li><li><b>요약은 사실 전달 범위로만.</b> 원문은 링크로 안내합니다.</li></ul></div></div>
-<div><div class="hd"><h2>회차</h2><span class="sub">최근 6호</span></div><ol class="top"><li><div class="tno">22</div><div><div class="thl"><a href="index.html">제22호 · 9월 29일</a></div><div class="twhy">AI 앞에서 교황은 「삶의 의미」를, 성균관은 「인간의 존엄」을 말했고, 조계종은 2기 임기를 열며 서울시와 문화유산 협의체를 추진한다.</div></div></li><li><div class="tno">21</div><div><div class="thl"><a href="2026-09-25.html">제21호 · 9월 25일</a></div><div class="twhy">추석 연휴 창에 감리교는 연회 감독 12명을 모두 가렸고, 조계종은 참사 유가족을 주빈으로 한 취임법회를 예고했으며, 해외선교 증여세엔 새 해석이 나왔다.</div></div></li><li><div class="tno">20</div><div><div class="thl"><a href="2026-09-22.html">제20호 · 9월 22일</a></div><div class="twhy">정부의 낙태약 도입에 종단 기관지 사설과 논평이 잇따랐고, 불교계는 남산 곤돌라 백지화를 요구했으며, 장로교는 교세 감소폭이 다시 커진 숫자를 받아 들었다.</div></div></li><li><div class="tno">19</div><div><div class="thl"><a href="2026-09-18.html">제19호 · 9월 18일</a></div><div class="twhy">정부가 임신중지 약물 도입을 공식화하자 주교회의와 한교총이 나란히 우려를 냈고, 장로교 총회 주간은 교권 안건 부결로 닫혔다.</div></div></li><li><div class="tno">18</div><div><div class="thl"><a href="2026-09-15.html">제18호 · 9월 15일</a></div><div class="twhy">2027년 우리고장 국가유산 활용사업이 379건에서 244건으로 줄고 트랙은 다섯 그대로다 — 장로교 총회가 열리고, 주교회의는 호르무즈 파병에 공식 반대했다.</div></div></li><li><div class="tno">17</div><div><div class="thl"><a href="2026-09-11.html">제17호 · 9월 11일</a></div><div class="twhy">한교총이 해외선교비 과세 시행령의 2년 유예를 공식 요구했고, 국가유산청은 체류형 신규 사업 둘을 지자체 공모로 연다 — 장로교 총회 주간이 다음 주 시작된다.</div></div></li></ol></div>
+<div><div class="hd"><h2>회차</h2><span class="sub">최근 6호</span></div><ol class="top"><li><div class="tno">23</div><div><div class="thl"><a href="index.html">제23호 · 10월 2일</a></div><div class="twhy">수해 복구 지원에서 종교시설은 「관례상 제외」라는 답이 나왔고, 조계종 취임법회에서 대통령은 명상을 말했으며, 예장합동은 선교비 과세 협의체를 요구했다.</div></div></li><li><div class="tno">22</div><div><div class="thl"><a href="2026-09-29.html">제22호 · 9월 29일</a></div><div class="twhy">AI 앞에서 교황은 「삶의 의미」를, 성균관은 「인간의 존엄」을 말했고, 조계종은 2기 임기를 열며 서울시와 문화유산 협의체를 추진한다.</div></div></li><li><div class="tno">21</div><div><div class="thl"><a href="2026-09-25.html">제21호 · 9월 25일</a></div><div class="twhy">추석 연휴 창에 감리교는 연회 감독 12명을 모두 가렸고, 조계종은 참사 유가족을 주빈으로 한 취임법회를 예고했으며, 해외선교 증여세엔 새 해석이 나왔다.</div></div></li><li><div class="tno">20</div><div><div class="thl"><a href="2026-09-22.html">제20호 · 9월 22일</a></div><div class="twhy">정부의 낙태약 도입에 종단 기관지 사설과 논평이 잇따랐고, 불교계는 남산 곤돌라 백지화를 요구했으며, 장로교는 교세 감소폭이 다시 커진 숫자를 받아 들었다.</div></div></li><li><div class="tno">19</div><div><div class="thl"><a href="2026-09-18.html">제19호 · 9월 18일</a></div><div class="twhy">정부가 임신중지 약물 도입을 공식화하자 주교회의와 한교총이 나란히 우려를 냈고, 장로교 총회 주간은 교권 안건 부결로 닫혔다.</div></div></li><li><div class="tno">18</div><div><div class="thl"><a href="2026-09-15.html">제18호 · 9월 15일</a></div><div class="twhy">2027년 우리고장 국가유산 활용사업이 379건에서 244건으로 줄고 트랙은 다섯 그대로다 — 장로교 총회가 열리고, 주교회의는 호르무즈 파병에 공식 반대했다.</div></div></li></ol></div>
 <div class="foot">자동 수집·정리 과정에서 오류가 있을 수 있습니다. 잘못된 내용을 발견하시면 알려주세요.</div>
 </div>
 </body>
